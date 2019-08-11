@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>cn.idea.gwq.console-xml-formatter</id>
+    <name>console-xml-formatter</name>
+    <vendor email="winkingrt@gmail.com" url="http://www.gwq.cn">cn.gwq</vendor>
+
+    <description><![CDATA[
+    fomat xml selected from console,just break before element start<br>
+    <em>xml-formatter</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="cn.gwq.console.xml.formatter" class="cn.gwq.plugin.ConsoleXmlFormatter"
+                text="copyAsFormattedXml"
+                description="copyAsFormattedXml">
+            <!--在console右键中显示菜单-->
+            <add-to-group group-id="ConsoleView.PopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
